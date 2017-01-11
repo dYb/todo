@@ -2,8 +2,8 @@ const jwt = require('koa-jwt')
 import Koa = require('koa')
 import * as co from 'co'
 import * as bodyParse from 'koa-bodyparser'
-import router, { SECRET_KEY } from './routes'
 import koaBody = require('koa-body')
+import router, { SECRET_KEY } from './routes'
 
 const app = new Koa()
 

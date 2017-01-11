@@ -1,4 +1,5 @@
 import { Request } from 'koa'
+import { graphiqlKoa } from 'graphql-server-koa'
 import * as Router from 'koa-router'
 import { sign, verify, decode} from 'jsonwebtoken'
 import Todos, { TodoInterface } from './model-todo'
@@ -78,6 +79,8 @@ router.post('/todo', async (ctx) => {
   ctx.body = Todos.create({ content })
   ctx.status = 201
 })
+
+router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }))
 
 
 export default router

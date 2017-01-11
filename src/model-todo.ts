@@ -1,4 +1,6 @@
+// import db from './db'
 import crypto = require('crypto')
+
 export interface TodoInterface {
   id?: string
   time?: number
